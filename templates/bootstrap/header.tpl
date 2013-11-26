@@ -17,13 +17,10 @@
 			<ul class="nav navbar-nav">
 				<li {if $pagename eq "published" || $pagename eq "index"}class="active"{/if}><a href="{$my_base_url}{$my_pligg_base}">{#PLIGG_Visual_Home#}</a></li>
 				{checkActionsTpl location="tpl_pligg_navbar_start"}
-				<li {if $pagename eq "new"}class="active"{/if}><a href="{$URL_new}">{#PLIGG_Visual_Pligg_Queued#}</a></li>
 				{checkActionsTpl location="tpl_pligg_submit_link_start"}
 				<li {if $pagename eq "submit"}class="active"{/if}><a href="{$URL_submit}">{#PLIGG_Visual_Submit_A_New_Story#}</a></li>
 				{checkActionsTpl location="tpl_pligg_submit_link_end"}
-				{if $enable_group eq "true"}	
-					<li {if $pagename eq "groups" || $pagename eq "submit_groups" || $pagename eq "group_story"}class="active"{/if}><a href="{$URL_groups}"><span>{#PLIGG_Visual_Groups#}</span></a></li>
-				{/if}
+				
 				{if $Auto_scroll == '2'}
 					<li class="dropdown">
 						<a data-toggle="dropdown" class="dropdown-toggle" href="#">More <b class="caret"></b></a>
@@ -65,7 +62,7 @@
 			</script>
 			<form action="{$my_pligg_base}/search.php" method="get" name="thisform-search" id="thisform-search" class="navbar-form navbar-left custom_nav_search" role="search" {if $urlmethod==2}onsubmit='document.location.href="{$my_base_url}{$my_pligg_base}/search/"+this.search.value.replace(/\//g,"|").replace(/\?/g,"%3F"); return false;'{/if}>
 				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Search" tabindex="20" name="search" value="{$searchboxtext}" onfocus="if(this.value == some_search) {ldelim}this.value = '';{rdelim}" onblur="if (this.value == '') {ldelim}this.value = some_search;{rdelim}"/>
+					<input type="text" class="form-control" placeholder="Search" tabindex="50" name="search" value="{$searchboxtext}" onfocus="if(this.value == some_search) {ldelim}this.value = '';{rdelim}" onblur="if (this.value == '') {ldelim}this.value = some_search;{rdelim}"/>
 				</div>
 				<button type="submit" tabindex="21" class="btn btn-default custom_nav_search_button" />{#PLIGG_Visual_Search_Go#}</button>
 			</form>

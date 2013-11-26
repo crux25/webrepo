@@ -92,10 +92,12 @@
 			{if $pagename eq "submit" || $pagename eq "user" || $pagename eq "profile" || $pagename eq "user_edit" || $pagename eq "register" || $pagename eq "login"}
 				<div class="col-md-12">
 			{else}
-				<div class="col-md-9">
+			        <div class="col-md-2">
+					
+				</div>
+				<div class="col-md-7">
 			{/if}
 					<!-- START BREADCRUMB -->
-						{include file=$the_template"/breadcrumb.tpl"}
 					<!-- END BREADCRUMB -->
 					
 					{literal}
